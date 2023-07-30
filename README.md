@@ -1,6 +1,6 @@
 Set Up Project
 
-React Setup Process
+### React Setup Process ###
 
 git clone https://github.com/aviban12/my-react-app.git
 
@@ -12,7 +12,7 @@ npm start
 
 Url = http://localhost:3000/
 
-Django Setup Process
+### Django Setup Process ###
 
 git clone https://github.com/aviban12/Stock_market-data-platform.git
 
@@ -28,9 +28,12 @@ python manage.py runserver
 
 Url = http://localhost:8000/
 
+### High Level Design ###
+
 Current Flow without Any scaling
 ![Flow Diagram](image.png)
 
+### Production Deployment Design ###
 
 Auto Scaled Architecture
 ![](image-1.png)
