@@ -40,4 +40,4 @@ Auto Scaled Architecture
 
 
 ### UI Screenshot ###
-![User Interface](image-2.png)
+![User Interface Table](image-3.png)
