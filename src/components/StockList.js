@@ -6,11 +6,13 @@ import 'ag-grid-community/styles/ag-theme-alpine.css';
 import './StockList.css'
 
 const StockList = () => {
+  const baseUrl = process.env.REACT_APP_BASE_URL;
+  const threadCanRun = process.env.REACT_APP_CAN_RENDER;
   const [rowData, setRowData] = useState([]);
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/get-stocks/');
+      const response = await axios.get(`${baseUrl}/get-stocks/`);
       setRowData(response.data);
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -19,8 +21,7 @@ const StockList = () => {
 
   const updateStockData = async(pageNumber) => {
     try {
-      
-      const response = await axios.get(`http://localhost:8000/update-stock-data/${pageNumber}/`);
+      const response = await axios.get(`${baseUrl}/update-stock-data/${pageNumber}/`);
       console.log(`Updating stock data for page Number = ${pageNumber}`);
     } catch(error) {
       console.log(`error in starting stock update for pageNumber = ${pageNumber}`);
@@ -30,19 +31,19 @@ const StockList = () => {
   useEffect(() => {
     fetchData();
 
-    const interval1 = setInterval(() => {
+    const fetchDataInterval = setInterval(() => {
       fetchData();
     }, 3000);
 
-    const interval2 = setInterval(() => {
-      for(let pageNumber = 1; pageNumber <= 3; pageNumber++){
-        updateStockData(pageNumber);
-      }
+    const UpdateDataInterval = setInterval(() => {
+      // for(let pageNumber = 1; pageNumber <= 1; pageNumber++){
+        updateStockData(1);
+      // }
     }, 5000);
 
    return () => {
-      clearInterval(interval1);
-      clearInterval(interval2);
+      clearInterval(fetchDataInterval);
+      clearInterval(UpdateDataInterval);
     };
   }, []);
 
