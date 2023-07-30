@@ -31,9 +31,9 @@ Url = http://localhost:8000/
 ### High Level Design ###
 
 Current Flow without Any scaling
-![Flow Diagram](image.png)
+![High Level Design](image.png)
 
 ### Production Deployment Design ###
 
 Auto Scaled Architecture
-![](image-1.png)
+![Auto Scaling Diagram](image-1.png)
