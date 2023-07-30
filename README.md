@@ -36,8 +36,7 @@ Current Flow without Any scaling
 ### Production Deployment Design ###
 
 Auto Scaled Architecture
-![Auto Scaling Diagram](image-1.png)
-
+![Alt text](image-2.png)
 
 ### UI Screenshot ###
 ![User Interface Table](image-3.png)
