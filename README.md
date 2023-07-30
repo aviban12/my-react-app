@@ -37,3 +37,7 @@ Current Flow without Any scaling
 
 Auto Scaled Architecture
 ![Auto Scaling Diagram](image-1.png)
+
+
+### UI Screenshot ###
+![User Interface](image-2.png)
